@@ -30,23 +30,23 @@ public class Sneaker {
         this.ask = ask;
     }
 
-    String getStyle(){
+    public String getStyle(){
         return style;
     }
 
-    String getName(){
+    public String getName(){
         return name;
     }
 
-    int getSale(){
+    public int getSale(){
         return sale;
     }
 
-    int getBid(){
+    public int getBid(){
         return bid;
     }
 
-    int getAsk(){
+    public int getAsk(){
         return ask;
     }
 
@@ -54,7 +54,7 @@ public class Sneaker {
         offers.add(offer);
     }
 
-    List<Offer> getOffers(){
+    public List<Offer> getOffers(){
         return offers;
     }
 }
