@@ -1,5 +1,8 @@
 package edu.estatuas.stockx.item;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Sneaker {
 
     private final String style;
@@ -7,6 +10,8 @@ public class Sneaker {
     private int sale;
     private int ask;
     private int bid;
+
+    private List<Offer> offers = new ArrayList<>();
 
     public Sneaker(String style, String name){
         this.style = style;
@@ -43,5 +48,13 @@ public class Sneaker {
 
     int getAsk(){
         return ask;
+    }
+
+    void add(Offer offer){
+        offers.add(offer);
+    }
+
+    List<Offer> getOffers(){
+        return offers;
     }
 }
