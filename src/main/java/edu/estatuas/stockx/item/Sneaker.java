@@ -65,4 +65,12 @@ public class Sneaker implements Item {
     public List<Offer> getOffers(){
         return offers;
     }
+
+    @Override
+    public String toString() {
+        return "Sneaker{" +
+                "style='" + style + '\'' +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }
