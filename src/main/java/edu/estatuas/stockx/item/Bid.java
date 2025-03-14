@@ -1,6 +1,6 @@
 package edu.estatuas.stockx.item;
 
-public class Bid {
+public class Bid implements Offer{
     private final String size;
     private final Integer bid;
 
@@ -9,14 +9,17 @@ public class Bid {
         this.bid = bid;
     }
 
+    @Override
     public String size(){
         return this.size;
     }
 
-    public int bid(){
+    @Override
+    public int value(){
         return this.bid;
     }
 
+    @Override
     public int compareTo(Offer otherOffer){
         return 0;
     }
