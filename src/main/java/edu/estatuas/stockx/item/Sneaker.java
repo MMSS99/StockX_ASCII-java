@@ -3,7 +3,7 @@ package edu.estatuas.stockx.item;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Sneaker {
+public class Sneaker implements Item {
 
     private final String style;
     private final String name;
@@ -18,15 +18,18 @@ public class Sneaker {
         this.name = name;
     }
 
-    void setSale(int sale){
+    @Override
+    public void setSale(int sale){
         this.sale = sale;
     }
 
-    void setBid(int bid) {
+    @Override
+    public void setBid(int bid) {
         this.bid = bid;
     }
 
-    void setAsk(int ask) {
+    @Override
+    public void setAsk(int ask) {
         this.ask = ask;
     }
 
@@ -38,23 +41,33 @@ public class Sneaker {
         return name;
     }
 
+    @Override
     public int getSale(){
         return sale;
     }
 
+    @Override
     public int getBid(){
         return bid;
     }
 
+    @Override
     public int getAsk(){
         return ask;
     }
 
-    void add(Offer offer){
+    @Override
+    public void add(Offer offer){
         offers.add(offer);
     }
 
+    @Override
     public List<Offer> getOffers(){
         return offers;
+    }
+
+    @Override
+    public String toString() {
+        return name + "\n\t\t" + style;
     }
 }
