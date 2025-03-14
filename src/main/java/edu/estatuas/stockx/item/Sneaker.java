@@ -68,9 +68,6 @@ public class Sneaker implements Item {
 
     @Override
     public String toString() {
-        return "Sneaker{" +
-                "style='" + style + '\'' +
-                ", name='" + name + '\'' +
-                '}';
+        return name + "\n\t\t" + style;
     }
 }
