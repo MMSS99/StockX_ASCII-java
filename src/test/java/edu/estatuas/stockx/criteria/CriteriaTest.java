@@ -50,7 +50,7 @@ class CriteriaTest {
     void testSale(){
         Criteria sales = new Sales();
         List<Offer> saleslist = sales.checkCriteria(testSneaker);
-        assertEquals(testSneaker.getOffers().stream().filter(Offer -> Offer instanceof Sales).toList(), saleslist);
+        assertEquals(testSneaker.getOffers().stream().filter(Offer -> Offer instanceof Sale).toList(), saleslist);
     }
 
     @Test
