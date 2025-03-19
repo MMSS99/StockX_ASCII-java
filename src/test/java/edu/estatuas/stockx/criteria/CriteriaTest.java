@@ -66,4 +66,11 @@ class CriteriaTest {
         List<Offer> minasklist = minAsk.checkCriteria(testSneaker);
         assertEquals(List.of(testSneaker.getOffers().get(11)), minasklist);
     }
+
+    @Test
+    void testLastSale(){
+        Criteria lastSale = new LastSale();
+        List<Offer> lastsalelist = lastSale.checkCriteria(testSneaker);
+        assertEquals(List.of(testSneaker.getOffers().get(9)), lastsalelist);
+    }
 }
