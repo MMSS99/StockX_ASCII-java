@@ -38,4 +38,11 @@ class CriteriaTest {
         List<Offer> bidlist = bids.checkCriteria(testSneaker);
         assertEquals(testSneaker.getOffers().stream().filter(Offer -> Offer instanceof Bid).toList(), bidlist);
     }
+
+    @Test
+    void testAsks(){
+        Criteria asks = new Asks();
+        List<Offer> asklist = asks.checkCriteria(testSneaker);
+        assertEquals(testSneaker.getOffers().stream().filter(Offer -> Offer instanceof Ask).toList(), asklist);
+    }
 }
