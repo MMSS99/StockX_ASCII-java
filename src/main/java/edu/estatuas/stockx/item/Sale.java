@@ -27,7 +27,7 @@ public class Sale implements Offer{
 
     @Override
     public String toString() {
-        return "Bid{" +
+        return "Sale{" +
                 "size='" + size + '\'' +
                 ", bid=" + sale +
                 '}';

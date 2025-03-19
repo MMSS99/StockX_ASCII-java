@@ -26,7 +26,7 @@ public class Ask implements Offer {
 
     @Override
     public String toString() {
-        return "Bid{" +
+        return "Ask{" +
                 "size='" + size + '\'' +
                 ", bid=" + ask +
                 '}';
