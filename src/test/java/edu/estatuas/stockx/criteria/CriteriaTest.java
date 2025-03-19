@@ -59,4 +59,11 @@ class CriteriaTest {
         List<Offer> maxbidlist = maxBid.checkCriteria(testSneaker);
         assertEquals(List.of(testSneaker.getOffers().get(3)), maxbidlist);
     }
+
+    @Test
+    void testMinAsk(){
+        Criteria minAsk = new MinAsk();
+        List<Offer> minasklist = minAsk.checkCriteria(testSneaker);
+        assertEquals(List.of(testSneaker.getOffers().get(11)), minasklist);
+    }
 }
