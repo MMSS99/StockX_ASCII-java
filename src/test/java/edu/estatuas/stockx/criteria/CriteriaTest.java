@@ -19,7 +19,7 @@ class CriteriaTest {
         testSneaker.add(new Bid("4", 28));
         testSneaker.add(new Ask("8", 91));
         testSneaker.add(new Sale("11", 100));
-        testSneaker.add(new Bid("7", 47));
+        testSneaker.add(new Bid("7", 4700));
         testSneaker.add(new Bid("2", 31));
         testSneaker.add(new Ask("10", 912));
         testSneaker.add(new Ask("8", 91));
@@ -44,5 +44,19 @@ class CriteriaTest {
         Criteria asks = new Asks();
         List<Offer> asklist = asks.checkCriteria(testSneaker);
         assertEquals(testSneaker.getOffers().stream().filter(Offer -> Offer instanceof Ask).toList(), asklist);
+    }
+
+    @Test
+    void testSale(){
+        Criteria sales = new Sales();
+        List<Offer> saleslist = sales.checkCriteria(testSneaker);
+        assertEquals(testSneaker.getOffers().stream().filter(Offer -> Offer instanceof Sales).toList(), saleslist);
+    }
+
+    @Test
+    void testMaxBid(){
+        Criteria maxBid = new MaxBid();
+        List<Offer> maxbidlist = maxBid.checkCriteria(testSneaker);
+        assertEquals(List.of(testSneaker.getOffers().get(3)), maxbidlist);
     }
 }
