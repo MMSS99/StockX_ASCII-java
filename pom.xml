@@ -41,7 +41,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>edu.estatuas.appbrunosbox.Brunosbox</mainClass>
+                            <mainClass>edu.estatuas.stockx.Stockx</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
