@@ -20,15 +20,7 @@ public class Bid implements Offer{
     }
 
     @Override
-    public int compareTo(Offer otherOffer){
-        return 0;
-    }
-
-    @Override
     public String toString() {
-        return "Bid{" +
-                "size='" + size + '\'' +
-                ", bid=" + bid +
-                '}';
+        return "\t\t\t" + size + '\t' + bid + '\n';
     }
 }

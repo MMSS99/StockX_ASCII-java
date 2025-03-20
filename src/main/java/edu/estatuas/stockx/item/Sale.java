@@ -21,15 +21,7 @@ public class Sale implements Offer{
     }
 
     @Override
-    public int compareTo(Offer otherOffer){
-        return 0;
-    }
-
-    @Override
     public String toString() {
-        return "Sale{" +
-                "size='" + size + '\'' +
-                ", bid=" + sale +
-                '}';
+        return "\t\t\t" + size + '\t' + sale + '\n';
     }
 }
