@@ -28,7 +28,7 @@ class CriteriaTest {
         testSneaker.add(new Sale("11", 180));
         testSneaker.add(new Ask("5", 45));
         testSneaker.add(new Ask("6", 1));
-        testSneaker.add(new Ask("8", 97));
+        testSneaker.add(new Bid("8", 97));
     }
 
 
@@ -81,5 +81,14 @@ class CriteriaTest {
         assertTrue(sizelist.contains(testSneaker.getOffers().get(1)));
         assertTrue(sizelist.contains(testSneaker.getOffers().get(6)));
         assertTrue(sizelist.contains(testSneaker.getOffers().get(12)));
+    }
+
+    @Test
+    void testAndCriteria(){
+        Criteria sizes = new Size("8");
+        Criteria bids = new Bids();
+        Criteria andCriteria = new AndCriteria(sizes, bids);
+        List<Offer> sizebidlist = andCriteria.checkCriteria(testSneaker);
+        assertEquals(List.of(testSneaker.getOffers().getLast()), sizebidlist);
     }
 }
