@@ -11,7 +11,7 @@ public class AndCriteria implements Criteria{
     Criteria criteriaOne;
     Criteria criteriaTwo;
 
-    AndCriteria(Criteria criteriaOne, Criteria criteriaTwo){
+    public AndCriteria(Criteria criteriaOne, Criteria criteriaTwo){
         this.criteriaOne = criteriaOne;
         this.criteriaTwo = criteriaTwo;
     }

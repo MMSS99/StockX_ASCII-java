@@ -11,7 +11,7 @@ public class Min implements Criteria{
     Criteria comparatorCriteria;
     Criteria typedCriteria; //typed porque es de donde heredo el tipo de objeto real
 
-    Min(Criteria comparatorCriteria, Criteria typedCriteria) {
+    public Min(Criteria comparatorCriteria, Criteria typedCriteria) {
         this.comparatorCriteria = comparatorCriteria;
         this.typedCriteria = typedCriteria;
     }

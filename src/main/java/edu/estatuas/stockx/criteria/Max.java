@@ -11,7 +11,7 @@ public class Max implements Criteria{
     Criteria comparatorCriteria;
     Criteria typedCriteria; //typed porque es de donde heredo el tipo de objeto real
 
-    Max(Criteria comparatorCriteria, Criteria typedCriteria) {
+    public Max(Criteria comparatorCriteria, Criteria typedCriteria) {
         this.comparatorCriteria = comparatorCriteria;
         this.typedCriteria = typedCriteria;
     }
