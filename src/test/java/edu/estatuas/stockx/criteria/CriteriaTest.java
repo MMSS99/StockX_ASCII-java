@@ -73,4 +73,13 @@ class CriteriaTest {
         List<Offer> lastsalelist = lastSale.checkCriteria(testSneaker);
         assertEquals(List.of(testSneaker.getOffers().get(9)), lastsalelist);
     }
+
+    @Test
+    void testSize(){
+        Criteria size = new Size("8");
+        List<Offer> sizelist = size.checkCriteria(testSneaker);
+        assertTrue(sizelist.contains(testSneaker.getOffers().get(1)));
+        assertTrue(sizelist.contains(testSneaker.getOffers().get(6)));
+        assertTrue(sizelist.contains(testSneaker.getOffers().get(12)));
+    }
 }
