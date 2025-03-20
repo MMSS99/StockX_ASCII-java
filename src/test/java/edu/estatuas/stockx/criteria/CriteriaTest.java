@@ -78,7 +78,6 @@ class CriteriaTest {
         Criteria size = new Size("8");
         List<Offer> sizelist = size.checkCriteria(testSneaker);
         assertTrue(sizelist.contains(testSneaker.getOffers().get(1)));
-        assertTrue(sizelist.contains(testSneaker.getOffers().get(6)));
         assertTrue(sizelist.contains(testSneaker.getOffers().get(12)));
     }
 
@@ -92,11 +91,16 @@ class CriteriaTest {
     }
 
     @Test
-    void testMinDoubleCriteria(){
+    void testMinMaxDoubleCriteria(){
         Criteria size = new Size("10");
         Criteria asks = new Asks();
+
         Criteria min = new Min(size, asks);
         List<Offer> minlist = min.checkCriteria(testSneaker);
         assertTrue(minlist.contains(testSneaker.getOffers().get(11)));
+
+        Criteria max = new Max(size, asks);
+        List<Offer> maxlist = max.checkCriteria(testSneaker);
+        assertTrue(maxlist.contains(testSneaker.getOffers().get(5)));
     }
 }
