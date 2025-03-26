@@ -12,7 +12,7 @@ public class LastSale implements Criteria {
     public List<Offer> checkCriteria(Item sneaker){
         Sales allsales = new Sales();
         List<Offer> allsaleslist = allsales.checkCriteria(sneaker);
-        List<Offer> returnList = List.of(allsaleslist.get(allsaleslist.toArray().length-1));
+        List<Offer> returnList =  allsaleslist.isEmpty() ? List.of() : List.of(allsaleslist.get(allsaleslist.toArray().length-1));
         return returnList;
     }
 }
